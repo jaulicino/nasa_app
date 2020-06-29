@@ -1,0 +1,18 @@
+When I first looked at the question, "Why do you want to work for NASA?", I thought back to childhood memories and powerful emotional moments which set me on the path of applying today. But after further consideration, I realized that this question is intentionally widely open-ended and the reasons I have for applying are not just emotional. I am intellectually fascinated by NASA's work and believe that I have the scientific acumen to assist NASA as an intern. 
+
+  I decided that I needed to demonstrate this and believe I have done so here. I decided to do a gravity sandbox for three main reasons:
+  	1) It demonstrates my drive and work ethic
+  	2) It demonstrates my knowledge of implementing scientific disciplines and phenomena into code and computational environments
+  	3) It demonstrates my ability to self motivate, and work through problems I encounter. Hopefully, it demonstrates I have the mind of a NASA scientist
+
+  The technological specifics and techniques I used are below:
+  	1) Recursive and Algorithmic programming: the fill method in building the planets
+  	2) Physics: Newtonian Gravitation, time scale millions of times sped up (would be boring otherwise!)
+  	3) Mass: Mass's are calculated based on the sun's average density (for the star) and the earth's average density (for the earth). The dotted lines showing respective radii are accurate
+  	4) Images, UI's Etc: Credit for planet/sun images to NASA, everything else was designed by me
+
+  Granted, this project is certainly not perfect. There are a number of things I would like to fix one day, including:
+  	1) Inconsistent use of scales in image size and displacement of planets: originally this was necessary if the viewer wants to see the planets and the sun in the same shot, however I am sure there is a better way
+  	2) Imperfect physics: there are no collisions, and smaller bugs I noticed during testing
+  	3) Slow UI: design is not my strongest suite, however I believe I could substantially improve on the UI seen here
+  	4) Planet physics is based on the drawing, but the image is simply a circle: originally, I implemented an image system based on drawing but this was ugly. I am sure there is a better way

@@ -1,0 +1,7 @@
+if(mouse_y >= height/2){
+		ctx.fillStyle = "#000000"
+		ctx.fillText("Click here to play...", 3*canvas.height/4, canvas.width/80)
+		ctx.fillStyle = "#FFFF00"
+		ctx.fillText("Welcome to Pocket Solar System", canvas.height/4, canvas.width/80)
+
+	}

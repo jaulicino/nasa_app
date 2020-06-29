@@ -1,0 +1,47 @@
+
+@font-face {
+  font-family: "silkscreen";
+  src: url("fonts/silkscreen.ttf") format("truetype");
+} 
+
+:root {
+  /* If world-height is updated, update the media query
+    * at bottom of file too. */
+  --canvas_width: 98.25vw;
+  --canvas_height: var(--canvas_width)/1.875;
+}
+
+
+#main_canvas{
+  position: static;
+  left: 0.25vw;
+  height: 80vh;
+  width: var(--canvas_width);
+  border: 0.25vw;
+  border-radius: 25px;
+}
+
+#sign_off{
+  font-family: "silkscreen";
+  position: relative;
+  height: 10vh;
+  display: block;
+  overflow: hidden;
+  width: 95vw;
+}
+
+#ask_quantities{
+  font-family: "silkscreen";
+  position: relative;
+  height: 5vh;
+  left: 0.25vw;
+  width: var(--canvas_width);
+  background-color: "#FFaa00";
+  border: 3px solid black;
+  border-radius: 10px
+}
+
+#link{
+  position: relative;
+  left: 0.25vw;
+}
