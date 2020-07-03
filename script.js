@@ -250,6 +250,8 @@ function scene_3(){
 
 	ctx.fillStyle = "#FFFF00"
 	ctx.fillText("Solar System Map", width/72, height/24)
+	ctx.fillText("(" + Math.floor(width/2-x).toString() + ", " + Math.floor(y-height/2).toString() + ")", width/72, 2.5*height/24)
+
 	ctx.fillStyle = "#FFFF00"
 
 	var relative_x = (x-width/2)* zoom + width/2
@@ -260,8 +262,8 @@ function scene_3(){
 	draw_sidebar(0);
 	console.log(planets)
 	for(var i = 0; i < planets.length; i++){
-		planets[i].draw(x,y,canvas, ctx, zoom, width_scale,  "#5a4d41")
-		planets[i].update_position(i, planets, planet_g)
+		planets[i].draw(x,y,canvas, ctx, zoom, width_scale,  planet_scale, "#5a4d41")
+		planets[i].update_position(i, planets, planet_g, time_scale)
 	}
 
 
@@ -479,7 +481,7 @@ function key_up(event){
 //core game loop
 function gameLoop(){
 	var tbl = document.getElementById("ask_quantities")
-	ship_g = tbl.rows[0].cells[1].children[0].value
+	planet_scale = tbl.rows[0].cells[1].children[0].value
 	planet_g = tbl.rows[0].cells[0].children[0].value
 	time_scale = tbl.rows[0].cells[2].children[0].value
 

@@ -1,35 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
-    <title>SpaceBound</title>
-
-    <meta charset="UTF-8" />
-
-    <style>
-      #gameScreen {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        border: 5px solid black;
-      }
-    </style>
+    <meta charset="utf-8">
+    <title>Gravity Sandbox</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
   </head>
+  <canvas id="main_canvas" width="1800px" height="960px" class="desktop"></canvas>
+  <table id="ask_quantities">
+  	<tr>
+	  	<td id="planet_g_form">
+		  	Planet G = <input type="number" name="planet_g" value=1> (G) <br>
+		</td>
+		<td>
+		  	Planet Scale = <input type="number" name="planet_size" value=1> <br>
+		</td>
+		<td>
+		  	1 second = <input type="number" name="time_scale" value=1> seconds<br>
+		</td>
+	</tr>
+  </table>
 
-  <body>
-    
-    <canvas id="gameScreen" width="screen.width" height="screen.height"></canvas>
-    <script src="./src/index_s.js"></script>
-    <!--
-    <script src="./src/index.js"></script>
-    <script src="./src/background.js"></script>
-    <script src="./src/bullet.js"></script>
-    <script type="module" src="./src/enemyShip.js"></script>
-    <script src="./src/index.js"></script>
-    <script src="./src/input.js"></script>
-    <script src="./src/player.js"></script>
-    <script src="./src/ship.js"></script>
-    <script src="./src/stars.js"></script>
-    <script src="./src/store.js"></script>-->
-  </body>
-</html>
+  <div id="sign_off">
+  	Created By Joseph Aulicino for admission to NASA Internship Fall 2020
+  </div>
+  <a  href="info.html" id="link">Why this? More info here</div>
+
+  <script src="planet.js"></script>
+  <script src="script.js"></script>
+  </html>

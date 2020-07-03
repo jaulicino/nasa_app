@@ -31,7 +31,7 @@ class Planet{
 		this.x = -this.radius;
 		this.y = 0;
 	}
-	draw(x,y,canvas, ctx, zoom, width_scale, color){
+	draw(x,y,canvas, ctx, zoom, width_scale, planet_scale, color){
 		/*for(var i = 0; i < this.blocks.length(); i++){
 			for(var j = 0; j < this.blocks[i].length(); j++){
 				if(this.blocks[i][j] === 1){
@@ -46,7 +46,7 @@ class Planet{
 		ctx.fillStyle = color
 
 		ctx.fillStyle = "#000000"
-		ctx.drawImage(planet_img, this.x/(696.34e7)*zoom*width_scale + relative_x -this.mass*8*zoom*width_scale/5.95e24/2, this.y/(696.34e7)*zoom +relative_y-this.mass*8*zoom*width_scale/5.95e24/2, this.mass*8*zoom*width_scale/5.95e24, this.mass*8*zoom/5.95e24)
+		ctx.drawImage(planet_img, this.x/(696.34e7)*zoom*width_scale + relative_x -this.mass*8*planet_scale*zoom*width_scale/5.95e24/2, this.y/(696.34e7)*zoom +relative_y-this.mass*8*planet_scale*zoom*width_scale/5.95e24/2, this.mass*8*zoom*planet_scale*width_scale/5.95e24, this.mass*8*planet_scale*zoom/5.95e24)
 
 		/*for(var i = 0; i < this.blocks.length; i++){
 
@@ -56,7 +56,7 @@ class Planet{
 		}*/
 
 	}
-	update_position(iterator, planets, planet_g){
+	update_position(iterator, planets, planet_g, time_scale){
 		var fx = 0;
 		var fy = 0;
 		var mag = planet_g*(6.67430e-11)*this.mass*this.star_mass/(this.x*this.x + this.y*this.y)
@@ -78,10 +78,10 @@ class Planet{
 				console.log(mag*this.x/fhype)
 			}
 		}
-		this.vel_x -= 1e6*fx / this.mass
-		this.vel_y -= 1e6*fy / this.mass
-		this.x += this.vel_x *1000000
-		this.y += this.vel_y *1000000
+		this.vel_x -= time_scale*1e6*fx / this.mass
+		this.vel_y -= time_scale*1e6*fy / this.mass
+		this.x += this.vel_x *1000000*time_scale
+		this.y += this.vel_y *1000000* time_scale
 
 	}
 
